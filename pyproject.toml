@@ -21,11 +21,10 @@ dependencies = [
     "kaggle",
 ]
 
-[tool.setuptools]
-packages = ["src"]
-
 [project.optional-dependencies]
 test = [
     "pytest",
-    "pytest-cov"
+    "pytest-cov",
+    "pytest-env",
+    "requests"
 ]
