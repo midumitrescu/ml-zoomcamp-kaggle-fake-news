@@ -64,6 +64,9 @@ The rest is pretty standard.
 [click here](https://ml-zoomcamp-kaggle-fake-news.fly.dev/status)
 If returns "UP", then it's running!
 
+## OpenAPI
+there is some auto generated open-api docs [here](https://ml-zoomcamp-kaggle-fake-news.fly.dev/docs)!
+
 ## Disclaimer
 I thought the problem will be extra interesting and I could do some hyperparameter tunning.
 Scikit-Lean does allow one to play with some parameter when extracting text.
