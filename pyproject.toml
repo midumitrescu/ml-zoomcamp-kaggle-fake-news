@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ml-zoomcamp-midterm-kaggle-fake-news-detector"
+version = "0.1"
+dependencies = [
+    "matplotlib",
+    "jupyter",
+    "loguru",
+    "numpy",
+    "pandas",
+    "scipy",
+    "scikit-learn==1.6.1",
+    "seaborn",
+    "uv",
+    "fastapi>=0.120.3",
+    "uvicorn>=0.38.0",
+    "kagglehub",
+    "kaggle",
+]
+
+[tool.setuptools]
+packages = ["src"]
+
+[project.optional-dependencies]
+test = [
+    "pytest",
+    "pytest-cov"
+]
