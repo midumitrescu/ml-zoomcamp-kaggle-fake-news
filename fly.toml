@@ -1,0 +1,27 @@
+app = "fake-news-service"
+
+primary_region = "ord"
+
+[env]
+  PARAM_VERSION = "1"  # default value; Fly also allows overriding at deploy/runtime
+
+# Define how Fly should expose your internal port
+[[services]]
+  protocol = "tcp"
+  internal_port = 8000   # Must match uvicorn --port=8000
+
+  # Allow external HTTP access
+  [[services.ports]]
+    port = 80
+    handlers = ["http"]
+
+  [[services.ports]]
+    port = 443
+    handlers = ["tls", "http"]
+
+  # Health checks (optional but recommended)
+  [services.concurrency]
+    type = "connections"
+    soft_limit = 20
+    hard_limit = 25
+K
